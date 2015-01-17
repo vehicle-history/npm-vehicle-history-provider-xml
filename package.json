@@ -1,0 +1,56 @@
+{
+  "name": "vehicle-history-provider-xml",
+  "version": "0.9.0",
+  "description": "Vehicle history xml provider using car plate and vin number.",
+  "main": "./index.js",
+  "dependencies": {
+    "async": "^0.9.0",
+    "request": "^2.51.0",
+    "vehicle-history-model": "^0.9.3",
+    "winston": "^0.8.3"
+  },
+  "devDependencies": {
+    "config": "^1.10.0",
+    "chai": "^1.10.0",
+    "istanbul": "^0.3.5",
+    "mocha": "^2.1.0",
+    "rewire": "^2.1.3"
+  },
+  "scripts": {
+    "prepublish": "npm prune",
+    "test": "mocha test/*",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks test/*",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vehicle-history/npm-vehicle-history-provider-xml.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vehicle-history/npm-vehicle-history-provider-xml/issues"
+  },
+  "keywords": [
+    "vehicle",
+    "history",
+    "provider",
+    "xml",
+    "registration",
+    "marks",
+    "number",
+    "plate",
+    "reg",
+    "numberplate"
+  ],
+  "author": {
+    "name": "Zenedith",
+    "email": "zenedith@wp.pl"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/vehicle-history/npm-vehicle-history-provider-xml",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "readmeFilename": "README.md",
+  "_id": "vehicle-history-provider-xml@0.9.0",
+  "_from": "vehicle-history-provider-xml@^0.9.0"
+}
