@@ -1,0 +1,191 @@
+{
+  "url": "http://vehiclehost?plate=",
+  "headers": {
+    "Content-Type": "application/xhtml+xml",
+    "User-Agent": "Mozilla/5.0",
+    "Origin": "https://vehiclehost",
+    "Referer": "https://vehiclehost"
+  },
+  "xmlParserOptions": {
+    "object": true,
+    "reversible": false,
+    "coerce": true,
+    "sanitize": true,
+    "trim": true,
+    "arrayNotation": false
+  },
+  "mapper": [
+    {
+      "from": "vrm",
+      "to": "plate.value"
+    },
+    {
+      "from": "make",
+      "to": "name.manufacturer"
+    },
+    {
+      "from": "model",
+      "to": "name.model"
+    },
+    {
+      "from": "body",
+      "to": "variant.kind"
+    },
+    {
+      "from": "fuel",
+      "to": "engine.fuel"
+    },
+    {
+      "from": "engine_size",
+      "to": "engine.cc"
+    },
+    {
+      "from": "first_registered",
+      "to": "registration.firstDate"
+    }
+  ],
+  "mapperDefaults": [
+    {
+      "value": "uk",
+      "to": "plate.country"
+    }
+  ],
+  "resolver": {
+    "variant": {
+      "types": [
+        {
+          "name": "CAR",
+          "values": [
+            "car"
+          ]
+        },
+        {
+          "name": "VAN",
+          "values": [
+            "van"
+          ]
+        }
+      ],
+      "kinds": [
+        {
+          "name": "HATCHBACK",
+          "values": [
+            "hatchback"
+          ]
+        },
+        {
+          "name": "LIMOUSINE",
+          "values": [
+            "limousine"
+          ]
+        },
+        {
+          "name": "SEDAN",
+          "values": [
+            "sedan"
+          ]
+        },
+        {
+          "name": "COUPE",
+          "values": [
+            "coupe"
+          ]
+        },
+        {
+          "name": "OTHER",
+          "values": [
+            "other"
+          ]
+        }
+      ],
+      "engineFuels": [
+        {
+          "name": "PETROL",
+          "values": [
+            "petrol"
+          ]
+        },
+        {
+          "name": "CNG",
+          "values": [
+            "cng"
+          ]
+        },
+        {
+          "name": "LPG",
+          "values": [
+            "lpg"
+          ]
+        },
+        {
+          "name": "DIESEL",
+          "values": [
+            "diesel"
+          ]
+        },
+        {
+          "name": "OTHER",
+          "values": [
+            "other"
+          ]
+        }
+      ],
+      "policyStatus": [
+        {
+          "name": "UPTODATE",
+          "values": [
+            "actual"
+          ]
+        },
+        {
+          "name": "OUTDATED",
+          "values": [
+            "not actual"
+          ]
+        }
+      ],
+      "registrationStatus": [
+        {
+          "name": "REGISTERED",
+          "values": [
+            "registered"
+          ]
+        },
+        {
+          "name": "OUTDATED",
+          "values": [
+            "not registered"
+          ]
+        }
+      ],
+      "inspectionStatus": [
+        {
+          "name": "UPTODATE",
+          "values": [
+            "actual"
+          ]
+        },
+        {
+          "name": "OUTDATED",
+          "values": [
+            "not actual"
+          ]
+        }
+      ],
+      "mileageStatus": [
+        {
+          "name": "KM",
+          "values": [
+            "km"
+          ]
+        },
+        {
+          "name": "MILE",
+          "values": [
+            "mile"
+          ]
+        }
+      ]
+    }
+  }
+}
