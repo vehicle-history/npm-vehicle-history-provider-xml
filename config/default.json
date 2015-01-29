@@ -185,6 +185,34 @@
             "mile"
           ]
         }
+      ],
+      "countries": [
+        {
+          "name": "PL",
+          "values": [
+            "PL"
+          ]
+        },
+        {
+          "name": "UK",
+          "values": [
+            "UK"
+          ]
+        }
+      ],
+      "makes": [
+        {
+          "name": "AUDI",
+          "values": [
+            "AUDI"
+          ]
+        },
+        {
+          "name": "BMW",
+          "values": [
+            "BMW"
+          ]
+        }
       ]
     }
   }
