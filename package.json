@@ -4,6 +4,7 @@
   "description": "Vehicle history xml provider using car plate and vin number.",
   "main": "./index.js",
   "dependencies": {
+    "assert-plus": "^0.1.5",
     "request": "^2.51.0",
     "vehicle-history-model": "^0.9.8",
     "winston": "^0.8.3",

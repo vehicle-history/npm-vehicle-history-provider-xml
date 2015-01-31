@@ -4,7 +4,6 @@ var client = rewire('../../lib/client/client');
 var SearchCarRequest = require('vehicle-history-model').model.SearchCarRequest;
 var chai = require('chai');
 var should = chai.should();
-var expect = chai.expect;
 
 describe('client test', function () {
 
