@@ -6,7 +6,7 @@
   "dependencies": {
     "assert-plus": "^0.1.5",
     "request": "^2.51.0",
-    "vehicle-history-model": "^0.9.8",
+    "vehicle-history-model": "^0.9.9",
     "winston": "^0.8.3",
     "xml2json": "^0.5.1"
   },
