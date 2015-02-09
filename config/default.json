@@ -1,5 +1,6 @@
 {
   "url": "http://vehiclehost?plate=",
+  "timeout": 5000,
   "headers": {
     "Content-Type": "application/xhtml+xml",
     "User-Agent": "Mozilla/5.0",
