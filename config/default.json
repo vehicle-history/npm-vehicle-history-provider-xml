@@ -49,6 +49,10 @@
     {
       "value": "uk",
       "to": "plate.country"
+    },
+    {
+      "value": "car",
+      "to": "variant.type"
     }
   ],
   "resolver": {

@@ -1,7 +1,7 @@
 var options = require('config');
 var rewire = require('rewire');
 var client = rewire('../../lib/client/client');
-var SearchCarRequest = require('vehicle-history-model').model.SearchCarRequest;
+var SearchCarRequestBuilder = require('vehicle-history-model').model.searchCarRequest.SearchCarRequestBuilder;
 var chai = require('chai');
 var should = chai.should();
 
@@ -9,7 +9,18 @@ describe('client test', function () {
 
   it('should return error on missing plate', function (done) {
 
-    var request = new SearchCarRequest('', 'vin', 'date');
+    var plate = '';
+    var vin = 'vin';
+    var firstRegistrationDate = 'date';
+    var country = 'UK';
+
+    var request = new SearchCarRequestBuilder()
+      .withPlate(plate)
+      .withVin(vin)
+      .withFirstRegistrationDate(firstRegistrationDate)
+      .withCountry(country)
+      .build();
+
     client.loadVehicleHistoryContent(request, options, function (err, content) {
       should.exist(err);
       should.not.exist(content);
@@ -34,7 +45,17 @@ describe('client test', function () {
       }
     });
 
-    var request = new SearchCarRequest('plate', 'vin', 'date');
+    var plate = 'plate';
+    var vin = 'vin';
+    var firstRegistrationDate = 'date';
+    var country = 'UK';
+
+    var request = new SearchCarRequestBuilder()
+      .withPlate(plate)
+      .withVin(vin)
+      .withFirstRegistrationDate(firstRegistrationDate)
+      .withCountry(country)
+      .build();
     client.loadVehicleHistoryContent(request, options, function (err, content) {
       should.exist(content);
       should.not.exist(err);
