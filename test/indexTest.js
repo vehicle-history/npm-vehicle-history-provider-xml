@@ -3,7 +3,7 @@ var index = rewire('../index');
 var options = require('config');
 var chai = require('chai');
 var should = chai.should();
-var expect = chai.expect;
+var SearchCarRequestBuilder = require('vehicle-history-model').model.searchCarRequest.SearchCarRequestBuilder;
 
 var body = '';
 
@@ -36,8 +36,16 @@ describe('index test', function () {
     var plate = 'HD11JMA';
     var vin = 'ABC123456789DEF';
     var firstRegistrationDate = '11.11.2000';
+    var country = 'UK';
 
-    index.checkVehicleHistory(plate, vin, firstRegistrationDate, options, function (err, result) {
+    var searchCarRequest = new SearchCarRequestBuilder()
+      .withPlate(plate)
+      .withVin(vin)
+      .withFirstRegistrationDate(firstRegistrationDate)
+      .withCountry(country)
+      .build();
+
+    index.checkVehicleHistory(searchCarRequest, options, function (err, result) {
       should.not.exist(err);
       should.exist(result);
       done();
