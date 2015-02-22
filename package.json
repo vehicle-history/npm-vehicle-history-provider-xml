@@ -6,7 +6,7 @@
   "dependencies": {
     "assert-plus": "^0.1.5",
     "request": "^2.51.0",
-    "vehicle-history-model": "^0.9.18",
+    "vehicle-history-model": "^0.9.19",
     "winston": "^0.8.3",
     "xml2json": "^0.5.1"
   },
@@ -19,9 +19,9 @@
   },
   "scripts": {
     "prepublish": "npm prune",
-    "test": "mocha test/*",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks test/*",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- test/*"
+    "test": "mocha --recursive test",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks --recursive test",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --recursive test"
   },
   "repository": {
     "type": "git",
