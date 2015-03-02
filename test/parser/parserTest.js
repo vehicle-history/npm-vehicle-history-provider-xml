@@ -26,23 +26,23 @@ describe('parser test', function () {
 
       should.not.exist(err);
       should.exist(report);
-      should.exist(report.car);
+      should.exist(report.vehicle);
 
-      var car = report.car;
+      var vehicle = report.vehicle;
 
-      car.name.make.should.equal('BMW');
-      car.name.model.should.equal('320I SE');
+      vehicle.name.make.should.equal('BMW');
+      vehicle.name.model.should.equal('320I SE');
 
-      car.type.type.should.equal('CAR');
-      car.type.kind.should.equal('COUPE');
+      vehicle.type.type.should.equal('CAR');
+      vehicle.type.kind.should.equal('COUPE');
 
-      car.engine.cubicCapacity.should.equal(1995);
-      car.engine.fuel.should.equal('PETROL');
+      vehicle.engine.cubicCapacity.should.equal(1995);
+      vehicle.engine.fuel.should.equal('PETROL');
 
-      car.registration.firstAt.should.equal('2007-01-01T00:00:00.000Z');
-      car.plate.value.should.equal('HD11JMA');
-      car.plate.country.should.equal('UK');
-      car.vin.should.equal('ABC123456789DEF');
+      vehicle.registration.firstAt.should.equal('2007-01-01T00:00:00.000Z');
+      vehicle.plate.value.should.equal('HD11JMA');
+      vehicle.plate.country.should.equal('UK');
+      vehicle.vin.should.equal('ABC123456789DEF');
 
       done();
     });
