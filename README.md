@@ -1,8 +1,10 @@
 # vehicle-history-provider-xml
 [![npm version](https://badge.fury.io/js/vehicle-history-provider-xml.svg)](http://badge.fury.io/js/vehicle-history-provider-xml)
+[![bitHound Score](https://www.bithound.io/github/vehicle-history/npm-vehicle-history-provider-xml/badges/score.svg)](https://www.bithound.io/github/vehicle-history/npm-vehicle-history-provider-xml)
 [![Coverage Status](https://coveralls.io/repos/vehicle-history/npm-vehicle-history-provider-xml/badge.svg?branch=master)](https://coveralls.io/r/vehicle-history/npm-vehicle-history-provider-xml?branch=master)
 [![Build Status](https://travis-ci.org/vehicle-history/npm-vehicle-history-provider-xml.svg?branch=master)](https://travis-ci.org/vehicle-history/npm-vehicle-history-provider-xml)
 [![Dependency Status](https://david-dm.org/vehicle-history/npm-vehicle-history-provider-xml.svg)](https://david-dm.org/vehicle-history/npm-vehicle-history-provider-xml)
+[![devDependency Status](https://david-dm.org/vehicle-history/npm-vehicle-history-provider-xml/dev-status.svg)](https://david-dm.org/vehicle-history/npm-vehicle-history-provider-xml#info=devDependencies)
 
 [![NPM](https://nodei.co/npm/vehicle-history-provider-xml.png?downloads=true&stars=true)](https://nodei.co/npm/vehicle-history-provider-xml/)
 
@@ -26,9 +28,13 @@ npm test
 
 ## Dependencies
 
+- [assert-plus](https://github.com/mcavage/node-assert-plus): Extra assertions on top of node&#39;s assert module
 - [request](https://github.com/request/request): Simplified HTTP request client.
 - [vehicle-history-model](https://github.com/vehicle-history/npm-vehicle-history-model): Vehicle history model.
 - [winston](https://github.com/flatiron/winston): A multi-transport async logging library for Node.js
+- [winston-loggly](https://github.com/indexzero/winston-loggly): A Loggly transport for winston
+- [node-expat](https://github.com/git+https:/): NodeJS binding for fast XML parsing.
+- [xml2json](https://github.com/buglabs/node-xml2json): Converts xml to json and vice-versa, using node-expat.
 
 ## Dev Dependencies
 
