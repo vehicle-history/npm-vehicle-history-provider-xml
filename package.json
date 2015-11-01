@@ -1,13 +1,13 @@
 {
   "name": "vehicle-history-provider-xml",
-  "version": "0.9.12",
+  "version": "0.9.13",
   "description": "Vehicle history xml provider using car plate and vin number.",
   "main": "./index.js",
   "dependencies": {
     "assert-plus": "^0.1.5",
     "node-expat": "^2.3.11",
     "request": "^2.65.0",
-    "vehicle-history-model": "^0.9.46",
+    "vehicle-history-model": "^0.9.47",
     "winston": "^2.0.0",
     "winston-loggly": "^1.2.0",
     "xml2json": "^0.9.0"
@@ -54,6 +54,6 @@
     "node": ">=0.10.0"
   },
   "readmeFilename": "README.md",
-  "_id": "vehicle-history-provider-xml@0.9.12",
-  "_from": "vehicle-history-provider-xml@^0.9.12"
+  "_id": "vehicle-history-provider-xml@0.9.13",
+  "_from": "vehicle-history-provider-xml@^0.9.13"
 }
