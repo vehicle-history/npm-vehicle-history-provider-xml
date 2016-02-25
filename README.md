@@ -29,11 +29,11 @@ npm test
 ## Dependencies
 
 - [assert-plus](https://github.com/mcavage/node-assert-plus): Extra assertions on top of node&#39;s assert module
+- [node-expat](https://github.com/node-xmpp/node-expat): NodeJS binding for fast XML parsing.
 - [request](https://github.com/request/request): Simplified HTTP request client.
 - [vehicle-history-model](https://github.com/vehicle-history/npm-vehicle-history-model): Vehicle history model.
-- [winston](https://github.com/flatiron/winston): A multi-transport async logging library for Node.js
+- [winston](https://github.com/winstonjs/winston): A multi-transport async logging library for Node.js
 - [winston-loggly](https://github.com/indexzero/winston-loggly): A Loggly transport for winston
-- [node-expat](https://github.com/git+https:/): NodeJS binding for fast XML parsing.
 - [xml2json](https://github.com/buglabs/node-xml2json): Converts xml to json and vice-versa, using node-expat.
 
 ## Dev Dependencies
@@ -53,7 +53,7 @@ npm test
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2015 Zenedith
+Copyright (c) 2015-2016 Zenedith
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
