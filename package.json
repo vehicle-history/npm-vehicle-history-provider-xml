@@ -1,19 +1,19 @@
 {
   "name": "vehicle-history-provider-xml",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vehicle history xml provider using car plate and vin number.",
   "main": "./index.js",
   "dependencies": {
     "assert-plus": "1.0.0",
-    "request": "2.76.0",
+    "request": "2.78.0",
     "vehicle-history-model": "1.0.0",
-    "winston": "2.2.0",
+    "winston": "2.3.0",
     "winston-loggly": "1.3.1",
     "xml2json": "0.10.0"
   },
   "devDependencies": {
     "chai": "3.5.0",
-    "config": "1.21.0",
+    "config": "1.24.0",
     "istanbul": "0.4.5",
     "mocha": "3.1.2",
     "rewire": "2.5.2"
@@ -50,9 +50,9 @@
   "license": "MIT",
   "homepage": "https://github.com/vehicle-history/npm-vehicle-history-provider-xml",
   "engines": {
-    "node": ">=4.2.6"
+    "node": ">=7.0.0"
   },
   "readmeFilename": "README.md",
-  "_id": "vehicle-history-provider-xml@1.0.1",
-  "_from": "vehicle-history-provider-xml@^1.0.1"
+  "_id": "vehicle-history-provider-xml@1.0.2",
+  "_from": "vehicle-history-provider-xml@^1.0.2"
 }
