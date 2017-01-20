@@ -7,7 +7,7 @@
     "assert-plus": "1.0.0",
     "request": "2.79.0",
     "vehicle-history-model": "1.0.0",
-    "winston": "2.3.0",
+    "winston": "2.3.1",
     "winston-loggly": "1.3.1",
     "xml2json": "0.11.0"
   },
