@@ -1,40 +1,40 @@
-var options = require('config');
-var rewire = require('rewire');
-var client = rewire('../../lib/client/client');
-var SearchCarRequestBuilder = require('vehicle-history-model').model.searchCarRequest.SearchCarRequestBuilder;
-var chai = require('chai');
-var should = chai.should();
+const options = require('config');
+const rewire = require('rewire');
+const client = rewire('../../lib/client/client');
+const SearchCarRequestBuilder = require('vehicle-history-model').model.searchCarRequest.SearchCarRequestBuilder;
+const chai = require('chai');
+const should = chai.should();
 
-describe('client test', function () {
+describe('client test', () => {
 
-  it('should return error on missing plate', function (done) {
+  it('should return error on missing plate', done => {
 
-    var plate = '';
-    var vin = 'vin';
-    var firstRegistrationDate = 'date';
-    var country = 'UK';
+    const plate = '';
+    const vin = 'vin';
+    const firstRegistrationDate = 'date';
+    const country = 'UK';
 
-    var request = new SearchCarRequestBuilder()
+    const request = new SearchCarRequestBuilder()
       .withPlate(plate)
       .withVin(vin)
       .withFirstRegistrationDate(firstRegistrationDate)
       .withCountry(country)
       .build();
 
-    client.loadVehicleHistoryContent(request, options, function (err, content) {
+    client.loadVehicleHistoryContent(request, options, (err, content) => {
       should.exist(err);
       should.not.exist(content);
       done();
     });
   });
 
-  it('should return vehicle history (status 200)', function (done) {
+  it('should return vehicle history (status 200)', done => {
     client.__set__({
-      requestWithJar: function (opts, callback) {
+      requestWithJar: (opts, callback) => {
         should.exist(opts);
-        var error = null;
-        var response = null;
-        var body = '';
+        let error = null;
+        let response = null;
+        let body = '';
 
         if (opts.url === 'http://vehiclehost?plate=plate') {
           error = null;
@@ -45,18 +45,18 @@ describe('client test', function () {
       }
     });
 
-    var plate = 'plate';
-    var vin = 'vin';
-    var firstRegistrationDate = 'date';
-    var country = 'UK';
+    const plate = 'plate';
+    const vin = 'vin';
+    const firstRegistrationDate = 'date';
+    const country = 'UK';
 
-    var request = new SearchCarRequestBuilder()
+    const request = new SearchCarRequestBuilder()
       .withPlate(plate)
       .withVin(vin)
       .withFirstRegistrationDate(firstRegistrationDate)
       .withCountry(country)
       .build();
-    client.loadVehicleHistoryContent(request, options, function (err, content) {
+    client.loadVehicleHistoryContent(request, options, (err, content) => {
       should.exist(content);
       should.not.exist(err);
       done();
